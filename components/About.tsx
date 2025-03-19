@@ -3,7 +3,6 @@ import Image from "next/image";
 export default function About() {
     return (
         <div className="flex flex-col md:flex-row items-center justify-center h-screen p-8 bg-white">
-            {/* 左側のテキスト部分 */}
             <div className="w-full md:w-1/2 flex flex-col justify-center text-center md:text-left">
                 <h1 className="text-5xl font-bold whitespace-nowrap">
                     Hello! I am
@@ -16,11 +15,9 @@ export default function About() {
                     I’m currently learning Unity!
                 </p>
             </div>
-
-            {/* 右側の画像部分 */}
             <div className="w-full md:w-1/2 flex justify-center mt-8 md:mt-0">
                 <Image
-                    src="/images/profile.png" // public フォルダからの相対パス
+                    src="/images/profile.png"
                     alt="Profile Picture"
                     width={800}
                     height={800}
