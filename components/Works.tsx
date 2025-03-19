@@ -47,7 +47,7 @@ export default function Works() {
 
   return (
     <section className="bg-white p-6">
-      <h3 className="text-lg font-semibold text-gray-600 text-center">PORTFOLIO</h3>
+      <h3 className="text-lg font-semibold text-green-500 text-center">PORTFOLIO</h3>
       <h2 className="text-2xl font-bold mt-1 mb-6 text-center">My Recent Works</h2>
 
       <div className="flex justify-center space-x-4 mb-6">
