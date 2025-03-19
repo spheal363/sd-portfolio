@@ -24,7 +24,6 @@ export default function Languages() {
             key={lang.name}
             className="flex items-center p-4 rounded-lg shadow-md"
           >
-            {/* 左側: アイコン & 言語情報（幅を狭める） */}
             <div className="flex items-center w-2/5">
               <Image src={lang.icon} alt={lang.name} width={40} height={40} />
               <div className="ml-3">
@@ -33,7 +32,7 @@ export default function Languages() {
                 <p className="text-yellow-500">{getStars(lang.level)}</p>
               </div>
             </div>
-            {/* 右側: 説明部分（幅を広げて左寄せ） */}
+            
             <div className="ml-2 w-3/5 text-left">
               <p className="text-gray-500 text-sm" dangerouslySetInnerHTML={{ __html: lang.description }}></p>
             </div>
