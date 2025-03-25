@@ -3,9 +3,10 @@ import Image from "next/image";
 import { promises as fs } from "fs";
 import path from "path";
 import { remark } from "remark";
+import { Metadata } from "next";
 import html from "remark-html";
 
-const projectData = {
+const projectData: { [key: string]: { title: string; genre: string; image: string } } = {
   endenial: {
     title: "ENDENIAL",
     genre: "Game",
@@ -33,7 +34,13 @@ const projectData = {
   },
 };
 
-export default async function ProjectDetail({ params }: { params: { slug: string } }) {
+type PageProps = {
+  params: {
+    slug: string;
+  };
+};
+
+export default async function ProjectDetail({ params }: PageProps) {
   const { slug } = params;
 
   const project = projectData[slug];
