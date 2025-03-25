@@ -13,7 +13,8 @@ const projectData: { [key: string]: { title: string; genre: string; image: strin
   "portfolio-site": { title: "ポートフォリオサイト", genre: "Web App", image: "/images/project5.png" },
 };
 
-export default async function ProjectDetail({ params }: { params: { slug: string } }) {
+export default async function ProjectDetail(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params;
   const { slug } = params;
   const project = projectData[slug];
 
