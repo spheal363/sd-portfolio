@@ -6,31 +6,11 @@ import { remark } from "remark";
 import html from "remark-html";
 
 const projectData: { [key: string]: { title: string; genre: string; image: string } } = {
-  endenial: {
-    title: "ENDENIAL",
-    genre: "Game",
-    image: "/images/project1.png",
-  },
-  rokakone: {
-    title: "ろかこね",
-    genre: "Web App",
-    image: "/images/project2.png",
-  },
-  "light-the-way": {
-    title: "Light The Way",
-    genre: "Game",
-    image: "/images/project3.png",
-  },
-  "intercom-unlock": {
-    title: "インターホン自動解錠",
-    genre: "IoT",
-    image: "/images/project4.png",
-  },
-  "portfolio-site": {
-    title: "ポートフォリオサイト",
-    genre: "Web App",
-    image: "/images/project5.png",
-  },
+  endenial: { title: "ENDENIAL", genre: "Game", image: "/images/project1.png" },
+  rokakone: { title: "ろかこね", genre: "Web App", image: "/images/project2.png" },
+  "light-the-way": { title: "Light The Way", genre: "Game", image: "/images/project3.png" },
+  "intercom-unlock": { title: "インターホン自動解錠", genre: "IoT", image: "/images/project4.png" },
+  "portfolio-site": { title: "ポートフォリオサイト", genre: "Web App", image: "/images/project5.png" },
 };
 
 type PageProps = {
@@ -41,13 +21,11 @@ type PageProps = {
 
 export default async function ProjectDetail({ params }: PageProps) {
   const { slug } = params;
-
   const project = projectData[slug];
-  if (!project) {
-    return notFound();
-  }
 
-  // Markdown 読み込みと HTML 変換
+  if (!project) return notFound();
+
+  // ✅ slug を文字列として展開
   const markdownPath = path.join(process.cwd(), "app", "projects", "markdown", `${slug}.md`);
   let descriptionHtml = "";
 
