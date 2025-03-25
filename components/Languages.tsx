@@ -32,7 +32,7 @@ export default function Languages() {
                 <p className="text-yellow-500">{getStars(lang.level)}</p>
               </div>
             </div>
-            
+
             <div className="ml-2 w-3/5 text-left">
               <p className="text-gray-500 text-sm" dangerouslySetInnerHTML={{ __html: lang.description }}></p>
             </div>
