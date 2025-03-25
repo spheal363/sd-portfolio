@@ -3,7 +3,6 @@ import Image from "next/image";
 import { promises as fs } from "fs";
 import path from "path";
 import { remark } from "remark";
-import { Metadata } from "next";
 import html from "remark-html";
 
 const projectData: { [key: string]: { title: string; genre: string; image: string } } = {
