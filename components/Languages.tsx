@@ -10,8 +10,8 @@ const languages = [
   { name: "Ruby", years: 0.1, level: 1, icon: "/icons/ruby.svg", description: "paizaラーニングで基礎を学習<br/>Railsもpaizaで学習" },
 ];
 
-const getStars = (level) => "⭐".repeat(level) + "☆".repeat(3 - level);
-const formatYears = (years) => (years % 1 === 0 ? years : years.toFixed(1));
+const getStars = (level: number) => "⭐".repeat(level) + "☆".repeat(3 - level);
+const formatYears = (years: number) => (years % 1 === 0 ? years : years.toFixed(1));
 
 export default function Languages() {
   return (
