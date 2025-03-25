@@ -5,16 +5,10 @@ const blogs: Record<string, { title: string; content: string }> = {
   "blog-2": { title: "ブログ記事 2", content: "これは2つ目のブログ記事の内容です。" },
 };
 
-type PageProps = {
-  params: {
-    slug: string;
-  };
-};
-
-export default function BlogPost({ params }: PageProps) {
+export default function BlogPost({ params }: any) {
   const blog = blogs[params.slug];
 
-  if (!blog) return notFound(); // 存在しない記事は404ページへ
+  if (!blog) return notFound();
 
   return (
     <div>
