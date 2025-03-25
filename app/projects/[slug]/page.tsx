@@ -13,13 +13,7 @@ const projectData: { [key: string]: { title: string; genre: string; image: strin
   "portfolio-site": { title: "ポートフォリオサイト", genre: "Web App", image: "/images/project5.png" },
 };
 
-type PageProps = {
-  params: {
-    slug: string;
-  };
-};
-
-export default async function ProjectDetail({ params }: PageProps) {
+export default async function ProjectDetail({ params }: { params: { slug: string } }) {
   const { slug } = params;
   const project = projectData[slug];
 
