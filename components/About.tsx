@@ -16,19 +16,44 @@ export default function About() {
                 </p>
                 {/* ソーシャルアイコン */}
                 <div className="flex space-x-6 mt-6 justify-center md:justify-start">
-                    <a href="https://github.com/spheal363" target="_blank" rel="noopener noreferrer">
+                    <a
+                        href="https://github.com/spheal363"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="transition-transform duration-300 hover:-translate-y-1"
+                    >
                         <img src="/icons/github.png" alt="GitHub" className="w-10 h-10" />
                     </a>
-                    <a href="https://qiita.com/spheal363" target="_blank" rel="noopener noreferrer">
-                        <img src="/icons/qiita.png" alt="GitHub" className="w-10 h-10" />
+                    <a
+                        href="https://qiita.com/spheal363"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="transition-transform duration-300 hover:-translate-y-1"
+                    >
+                        <img src="/icons/qiita.png" alt="Qiita" className="w-10 h-10" />
                     </a>
-                    <a href="https://x.com/Spheal_363_poke" target="_blank" rel="noopener noreferrer">
+                    <a
+                        href="https://x.com/Spheal_363_poke"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="transition-transform duration-300 hover:-translate-y-1"
+                    >
                         <img src="/icons/x.png" alt="X (Twitter)" className="w-10 h-10" />
                     </a>
-                    <a href="https://atcoder.jp/users/Spheal_363" target="_blank" rel="noopener noreferrer">
+                    <a
+                        href="https://atcoder.jp/users/Spheal_363"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="transition-transform duration-300 hover:-translate-y-1"
+                    >
                         <img src="/icons/atcoder.png" alt="AtCoder" className="w-10 h-10" />
                     </a>
-                    <a href="https://unityroom.com/users/9sgx2wvbhcjd58qt6znk#google_vignette" target="_blank" rel="noopener noreferrer">
+                    <a
+                        href="https://unityroom.com/users/9sgx2wvbhcjd58qt6znk#google_vignette"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="transition-transform duration-300 hover:-translate-y-1"
+                    >
                         <img src="/icons/unityroom.png" alt="unityroom" className="w-10 h-10" />
                     </a>
                 </div>
