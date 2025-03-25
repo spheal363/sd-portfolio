@@ -1,24 +1,17 @@
 import { notFound } from "next/navigation";
 
-// ダミーのブログデータ
 const blogs: Record<string, { title: string; content: string }> = {
   "blog-1": { title: "ブログ記事 1", content: "これは最初のブログ記事の内容です。" },
   "blog-2": { title: "ブログ記事 2", content: "これは2つ目のブログ記事の内容です。" },
 };
 
-// ページコンポーネント用のProps
-interface BlogPostProps {
-  params: {
-    slug: string;
-  };
-}
-
-export default function BlogPost({ params }: BlogPostProps) {
+export default function BlogPost({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const blog = blogs[params.slug];
-
-  if (!blog) {
-    return notFound();
-  }
+  if (!blog) return notFound();
 
   return (
     <div>
@@ -28,7 +21,6 @@ export default function BlogPost({ params }: BlogPostProps) {
   );
 }
 
-// 静的生成に必要
 export async function generateStaticParams() {
   return Object.keys(blogs).map((slug) => ({ slug }));
 }
