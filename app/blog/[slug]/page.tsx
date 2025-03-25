@@ -5,7 +5,13 @@ const blogs: Record<string, { title: string; content: string }> = {
   "blog-2": { title: "ブログ記事 2", content: "これは2つ目のブログ記事の内容です。" },
 };
 
-export default function BlogPost({ params }: any) {
+type Params = {
+  params: {
+    slug: string;
+  };
+};
+
+export default function BlogPost({ params }: Params) {
   const blog = blogs[params.slug];
 
   if (!blog) return notFound();
