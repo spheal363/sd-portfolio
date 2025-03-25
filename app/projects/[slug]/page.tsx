@@ -19,7 +19,6 @@ export default async function ProjectDetail({ params }: { params: { slug: string
 
   if (!project) return notFound();
 
-  // ✅ slug を文字列として展開
   const markdownPath = path.join(process.cwd(), "app", "projects", "markdown", `${slug}.md`);
   let descriptionHtml = "";
 
