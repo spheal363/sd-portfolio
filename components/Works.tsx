@@ -10,31 +10,36 @@ export default function Works() {
       image: "/images/project1.png",
       genre: "Game",
       title: "ENDENIAL",
-      link: "/projects/endenial"
+      link: "/projects/endenial",
+      description: "終末世界を旅する探索型ホラーゲーム。"
     },
     {
       image: "/images/project2.png",
       genre: "Web App",
       title: "ろかこね",
-      link: "/projects/rokakone"
+      link: "/projects/rokakone",
+      description: "終末世界を旅する探索型ホラーゲーム。"
     },
     {
       image: "/images/project3.png",
       genre: "Game",
       title: "Light The Way",
-      link: "/projects/light-the-way"
+      link: "/projects/light-the-way",
+      description: "終末世界を旅する探索型ホラーゲーム。"
     },
     {
       image: "/images/project4.png",
       genre: "IoT",
       title: "インターホン自動解錠",
-      link: "/projects/intercom-unlock"
+      link: "/projects/intercom-unlock",
+      description: "終末世界を旅する探索型ホラーゲーム。"
     },
     {
       image: "/images/project5.png",
       genre: "Web App",
       title: "ポートフォリオサイト",
-      link: "/projects/portfolio-site"
+      link: "/projects/portfolio-site",
+      description: "終末世界を旅する探索型ホラーゲーム。"
     }
   ];
 
@@ -78,16 +83,27 @@ export default function Works() {
               transition={{ duration: 0.2, exit: { duration: 0 } }}
             >
               <Link href={project.link} className="block">
-                <div className="aspect-square">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="object-cover w-full h-full"
-                  />
+                <div className="relative aspect-square rounded-lg overflow-hidden perspective">
+                  <div className="w-full h-full transform-style preserve-3d transition-transform duration-500 group-hover:rotate-y-180">
+                    {/* Front Side */}
+                    <div className="absolute inset-0 backface-hidden rounded-lg overflow-hidden">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+
+                    {/* Back Side */}
+                    <div className="absolute inset-0 bg-green-100 text-black p-4 flex items-center justify-center text-center rotate-y-180 backface-hidden rounded-lg overflow-hidden">
+                      <p className="text-sm">{project.description}</p>
+                    </div>
+                  </div>
                 </div>
+
                 <div className="p-4 text-center">
                   <p className="text-sm text-gray-500">{project.genre}</p>
-                  <h3 className="text-lg font-semibold mt-1 text-black transition-colors duration-200 hover:text-green-500">
+                  <h3 className="text-lg font-semibold mt-1 text-black transition-colors duration-200 group-hover:text-green-500">
                     {project.title}
                   </h3>
                 </div>

@@ -1,3 +1,36 @@
+# 📌 レイアウト編集メモ
+
+## 変更したい部分と編集するファイル
+
+| 変更したい部分                     | 編集するファイル             |
+|--------------------------------|--------------------------|
+| **背景色や全体のレイアウト**       | `app/layout.tsx`        |
+| **ヘッダー（ナビゲーションバー）**   | `components/Navbar.tsx` |
+| **フッターのデザイン**             | `app/layout.tsx`        |
+| **ホームページのコンテンツ**       | `app/page.tsx`         |
+| **ブログページのレイアウト**       | `app/blog/page.tsx`     |
+| **お問い合わせページのデザイン**   | `app/contact/page.tsx`  |
+
+## ✏️ 編集方法
+
+### **1️⃣ 全体のレイアウトを変更**
+- `app/layout.tsx` で `body` の `className` を変更
+- 背景色、フォント、最大幅などを調整
+
+### **2️⃣ ナビゲーションバーを変更**
+- `components/Navbar.tsx` で `Link` を追加・削除
+- メニュー項目の順番を変更可能
+
+### **3️⃣ ホームページのコンテンツを変更**
+- `app/page.tsx` の `section` 内を編集
+- 制作物・言語レベル・イベント参加歴の順番を変更可能
+
+### **4️⃣ フッターを変更**
+- `app/layout.tsx` の `<footer>` を編集
+- コピーライトやデザインの変更可能
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
