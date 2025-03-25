@@ -7,7 +7,7 @@ export default function Navbar() {
         <Link href="/" className="text-lg font-bold">SD Portfolio</Link>
         <div className="space-x-4">
           <Link href="/" className="hover:underline">HOME</Link>
-          <Link href="/blog" className="hover:underline">BLOG</Link>
+          {/* <Link href="/blog" className="hover:underline">BLOG</Link> */}
         </div>
       </div>
     </nav>
