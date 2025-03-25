@@ -19,11 +19,17 @@ export default function About() {
                     <a href="https://github.com/spheal363" target="_blank" rel="noopener noreferrer">
                         <img src="/icons/github.png" alt="GitHub" className="w-10 h-10" />
                     </a>
+                    <a href="https://qiita.com/spheal363" target="_blank" rel="noopener noreferrer">
+                        <img src="/icons/qiita.png" alt="GitHub" className="w-10 h-10" />
+                    </a>
                     <a href="https://x.com/Spheal_363_poke" target="_blank" rel="noopener noreferrer">
                         <img src="/icons/x.png" alt="X (Twitter)" className="w-10 h-10" />
                     </a>
                     <a href="https://atcoder.jp/users/Spheal_363" target="_blank" rel="noopener noreferrer">
                         <img src="/icons/atcoder.png" alt="AtCoder" className="w-10 h-10" />
+                    </a>
+                    <a href="https://unityroom.com/users/9sgx2wvbhcjd58qt6znk#google_vignette" target="_blank" rel="noopener noreferrer">
+                        <img src="/icons/unityroom.png" alt="unityroom" className="w-10 h-10" />
                     </a>
                 </div>
             </div>
