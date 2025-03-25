@@ -5,7 +5,13 @@ const blogs: Record<string, { title: string; content: string }> = {
   "blog-2": { title: "ブログ記事 2", content: "これは2つ目のブログ記事の内容です。" },
 };
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
+type PageProps = {
+  params: {
+    slug: string;
+  };
+};
+
+export default function BlogPost({ params }: PageProps) {
   const blog = blogs[params.slug];
 
   if (!blog) return notFound(); // 存在しない記事は404ページへ
