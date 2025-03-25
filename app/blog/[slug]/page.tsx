@@ -5,13 +5,7 @@ const blogs: Record<string, { title: string; content: string }> = {
   "blog-2": { title: "ブログ記事 2", content: "これは2つ目のブログ記事の内容です。" },
 };
 
-type Params = {
-  params: {
-    slug: string;
-  };
-};
-
-export default function BlogPost({ params }: Params) {
+export default function BlogPost({ params }: { params: { slug: string } }) {
   const blog = blogs[params.slug];
 
   if (!blog) return notFound();
@@ -22,4 +16,9 @@ export default function BlogPost({ params }: Params) {
       <p className="mt-4">{blog.content}</p>
     </div>
   );
+}
+
+// 静的生成に必要
+export async function generateStaticParams() {
+  return Object.keys(blogs).map((slug) => ({ slug }));
 }
