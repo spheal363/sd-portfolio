@@ -11,35 +11,35 @@ export default function Works() {
       genre: "Game",
       title: "ENDENIAL",
       link: "/projects/endenial",
-      description: "終末世界を旅する探索型ホラーゲーム。"
+      description: "後ろからすべてが欠けていく終末世界の中、世界を直す7つの「かけら」を集める横スクロールアクションゲーム"
     },
     {
       image: "/images/project2.png",
       genre: "Web App",
       title: "ろかこね",
-      link: "/projects/rokakone",
-      description: "終末世界を旅する探索型ホラーゲーム。"
+      link: "/projects/locaconne",
+      description: "地域に関する情報を共有し、ユーザー同士でつながることを目的としたウェブアプリケーション"
     },
     {
       image: "/images/project3.png",
       genre: "Game",
       title: "Light The Way",
       link: "/projects/light-the-way",
-      description: "終末世界を旅する探索型ホラーゲーム。"
+      description: "記憶力で脱出！光で照らす迷路ゲーム"
     },
     {
       image: "/images/project4.png",
       genre: "IoT",
       title: "インターホン自動解錠",
       link: "/projects/intercom-unlock",
-      description: "終末世界を旅する探索型ホラーゲーム。"
+      description: "自宅のインターホンが押されたことを検知してスマホから開錠"
     },
     {
       image: "/images/project5.png",
       genre: "Web App",
       title: "ポートフォリオサイト",
       link: "/projects/portfolio-site",
-      description: "終末世界を旅する探索型ホラーゲーム。"
+      description: "このサイトです。"
     }
   ];
 

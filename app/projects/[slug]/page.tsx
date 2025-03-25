@@ -7,7 +7,7 @@ import html from "remark-html";
 
 const projectData: { [key: string]: { title: string; genre: string; image: string } } = {
   endenial: { title: "ENDENIAL", genre: "Game", image: "/images/project1.png" },
-  rokakone: { title: "ろかこね", genre: "Web App", image: "/images/project2.png" },
+  locaconne: { title: "ろかこね", genre: "Web App", image: "/images/project2.png" },
   "light-the-way": { title: "Light The Way", genre: "Game", image: "/images/project3.png" },
   "intercom-unlock": { title: "インターホン自動解錠", genre: "IoT", image: "/images/project4.png" },
   "portfolio-site": { title: "ポートフォリオサイト", genre: "Web App", image: "/images/project5.png" },
