@@ -11,6 +11,7 @@ const projectData: { [key: string]: { title: string; genre: string; image: strin
   "light-the-way": { title: "Light The Way", genre: "Game", image: "/images/project3.png" },
   "intercom-unlock": { title: "インターホン自動解錠", genre: "IoT", image: "/images/project4.png" },
   "portfolio-site": { title: "ポートフォリオサイト", genre: "Web App", image: "/images/project5.png" },
+  "web-memo": { title: "WEBメモ帳", genre: "Web App", image: "/images/project6.png" }
 };
 
 export default async function ProjectDetail(props: { params: Promise<{ slug: string }> }) {

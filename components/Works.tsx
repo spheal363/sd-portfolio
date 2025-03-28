@@ -40,6 +40,13 @@ export default function Works() {
       title: "ポートフォリオサイト",
       link: "/projects/portfolio-site",
       description: "このサイトです。"
+    },
+    {
+      image: "/images/project6.png",
+      genre: "Web App",
+      title: "WEBメモ帳",
+      link: "/projects/web-memo",
+      description: "Reactを理解するために一日で制作"
     }
   ];
 
