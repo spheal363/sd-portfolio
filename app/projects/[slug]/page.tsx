@@ -1,9 +1,12 @@
+'use server';
+
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { promises as fs } from "fs";
 import path from "path";
-import { remark } from "remark";
-import html from "remark-html";
+import React from 'react';
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import { promises as fs } from "fs";
 
 const projectData: { [key: string]: { title: string; genre: string; image: string } } = {
   endenial: { title: "ENDENIAL", genre: "Game", image: "/images/project1.png" },
@@ -14,23 +17,14 @@ const projectData: { [key: string]: { title: string; genre: string; image: strin
   "web-memo": { title: "WEBメモ帳", genre: "Web App", image: "/images/project6.png" }
 };
 
-export default async function ProjectDetail(props: { params: Promise<{ slug: string }> }) {
-  const params = await props.params;
+export default async function ProjectDetail({ params }: { params: { slug: string } }) {
   const { slug } = params;
   const project = projectData[slug];
 
   if (!project) return notFound();
 
   const markdownPath = path.join(process.cwd(), "app", "projects", "markdown", `${slug}.md`);
-  let descriptionHtml = "";
-
-  try {
-    const fileContents = await fs.readFile(markdownPath, "utf8");
-    const processed = await remark().use(html).process(fileContents);
-    descriptionHtml = processed.toString();
-  } catch (err) {
-    console.error("Markdown 読み込み失敗:", err);
-  }
+  const markdownString = await fs.readFile(markdownPath, "utf8");
 
   return (
     <section className="p-6 bg-white">
@@ -43,10 +37,9 @@ export default async function ProjectDetail(props: { params: Promise<{ slug: str
         height={450}
         className="w-full max-w-2xl mt-4 rounded-lg shadow-md"
       />
-      <div
-        className="mt-6 text-lg prose prose-neutral"
-        dangerouslySetInnerHTML={{ __html: descriptionHtml }}
-      />
+      <div className="prose mx-auto">
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdownString}</ReactMarkdown>
+      </div>
     </section>
   );
 }
