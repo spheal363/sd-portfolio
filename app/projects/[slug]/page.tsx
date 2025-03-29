@@ -34,7 +34,7 @@ export default async function ProjectDetail(props: { params: Promise<{ slug: str
         alt={project.title}
         width={1080}
         height={720}
-        className="w-full max-w-2xl mt-4 rounded-lg shadow-md"
+        className="w-auto mt-4 rounded-lg shadow-md"
       />
       <div className="prose w-full mt-6">
         <ReactMarkdown
