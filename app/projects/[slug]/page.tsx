@@ -37,7 +37,16 @@ export default async function ProjectDetail(props: { params: Promise<{ slug: str
         className="w-full max-w-2xl mt-4 rounded-lg shadow-md"
       />
       <div className="prose w-full mt-6">
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdownString}</ReactMarkdown>
+        <ReactMarkdown
+          remarkPlugins={[remarkGfm]}
+          components={{
+            p: ({ children }) => (
+              <p className="text-2xl">{children}</p>
+            ),
+          }}
+        >
+          {markdownString}
+        </ReactMarkdown>
       </div>
     </section>
   );
