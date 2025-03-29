@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import path from "path";
 import React from "react";
 import ReactMarkdown from "react-markdown";
