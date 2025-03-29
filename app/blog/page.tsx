@@ -8,12 +8,6 @@ const posts = [
     date: "2025-03-28",
     summary: "この投稿では、ポートフォリオサイトの立ち上げについて紹介します。",
   },
-  {
-    slug: "static-site-generation",
-    title: "Next.jsでの静的サイト生成（SSG）",
-    date: "2025-03-20",
-    summary: "Next.jsを使ったSSGの基本とメリットを解説します。",
-  },
 ];
 
 export default function BlogPage() {

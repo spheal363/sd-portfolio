@@ -54,7 +54,7 @@ export default function Works() {
   ];
 
   const [filter, setFilter] = useState("All");
-  const genres = ["All", "Web App", "Mobile App(制作予定)", "Game", "IoT"];
+  const genres = ["All", "Web App", "Mobile App", "Game", "IoT"];
   const filteredProjects =
     filter === "All"
       ? allProjects
@@ -74,9 +74,9 @@ export default function Works() {
           <button
             key={genre}
             onClick={() => setFilter(genre)}
-            className={`px-4 py-2 border-2 rounded-full transition-all duration-300 ${filter === genre
-              ? "bg-green-500 text-white border-green-500"
-              : "border-green-500 text-green-500 bg-white hover:bg-green-500 hover:text-white"
+            className={`px-4 py-1 sm:py-2 border-2 rounded-full transition-all duration-300 text-xs sm:text-base ${filter === genre
+                ? "bg-green-500 text-white border-green-500"
+                : "border-green-500 text-green-500 bg-white hover:bg-green-500 hover:text-white"
               }`}
           >
             {genre}
