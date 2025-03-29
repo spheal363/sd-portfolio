@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,9 +28,7 @@ export default function RootLayout({
         <div className="min-h-screen flex flex-col">
           <Navbar />
           <main className="w-full max-w-screen-xl mx-auto p-4">{children}</main>
-          <footer className="w-full py-4 text-center text-gray-600 bg-gray-200">
-            &copy; {new Date().getFullYear()} Sumire Doi Portfolio. All rights reserved.
-          </footer>
+          <Footer />
         </div>
       </body>
     </html>

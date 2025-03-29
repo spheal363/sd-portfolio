@@ -3,6 +3,7 @@ import Works from "@/components/Works";
 import Languages from "@/components/Languages";
 // import Events from "@/components/Events";
 // import ContactForm from "@/components/Contact";
+import Test from "@/components/Test";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Languages />
       {/* <Events /> */}
       {/* <ContactForm /> */}
+      <Test />
     </div>
   );
 }
