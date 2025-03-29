@@ -6,13 +6,6 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { promises as fs } from "fs";
 
-// propsの型を定義
-type ProjectDetailProps = {
-  params: {
-    slug: string;
-  };
-};
-
 const projectData: { [key: string]: { title: string; genre: string; image: string } } = {
   endenial: { title: "ENDENIAL", genre: "Game", image: "/images/project1.png" },
   locaconne: { title: "ろかこね", genre: "Web App", image: "/images/project2.png" },
@@ -22,7 +15,7 @@ const projectData: { [key: string]: { title: string; genre: string; image: strin
   "web-memo": { title: "WEBメモ帳", genre: "Web App", image: "/images/project6.png" }
 };
 
-export default async function ProjectDetail({ params }: ProjectDetailProps) {
+export default async function ProjectDetail({ params }: { params: { slug: string } }) {
   const { slug } = params;
   const project = projectData[slug];
 
@@ -38,11 +31,11 @@ export default async function ProjectDetail({ params }: ProjectDetailProps) {
       <Image
         src={project.image}
         alt={project.title}
-        width={800}
-        height={450}
+        width={1080}
+        height={720}
         className="w-full max-w-2xl mt-4 rounded-lg shadow-md"
       />
-      <div className="prose mx-auto">
+      <div className="prose w-full mt-6">
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdownString}</ReactMarkdown>
       </div>
     </section>
