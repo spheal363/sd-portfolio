@@ -1,3 +1,21 @@
+# 技術スタック
+- フレームワーク: Next.js 15.2.2
+- 言語: TypeScript 5.x
+- UIライブラリ: React 19.0.0
+- スタイリング: Tailwind CSS 3.4.17
+- アニメーション: Framer Motion 12.5.0
+- アイコン: Lucide React, React Icons
+
+# 必要な環境要件
+## Node.js
+- 推奨バージョン: Node.js 18.x以上
+- 現在の環境: Node.js v18.20.6
+- 理由: Next.js 15.xはNode.js 18.17以上を要求
+
+## パッケージマネージャー
+- npm: 10.8.2
+- 代替: yarn, pnpm, bunも使用可能
+
 # 📌 レイアウト編集メモ
 
 ## 変更したい部分と編集するファイル
