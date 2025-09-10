@@ -1,12 +1,18 @@
 export default function Events() {
-    return (
-      <section className="bg-white shadow rounded p-4">
-        <h2 className="text-xl font-bold">イベント参加歴</h2>
-        <ul className="mt-2 space-y-2">
-          <li className="p-4 border rounded">イベントA - 2024年3月</li>
-          <li className="p-4 border rounded">イベントB - 2023年10月</li>
-        </ul>
-      </section>
-    );
-  }
-  
+  const steps = [
+    { num: "ステップ1", title: "テキスト", text: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト" },
+    { num: "ステップ2", title: "テキスト", text: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト" },
+    { num: "ステップ3", title: "テキスト", text: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト" },
+  ];
+
+  return (
+    <section className="bg-white p-6">
+      <h3 className="text-lg font-semibold text-green-500 text-center">
+        EVENTS
+      </h3>
+      <h2 className="text-2xl font-bold mt-1 mb-6 text-center">
+        History of Participation
+      </h2>
+    </section>
+  );
+}

@@ -1,7 +1,7 @@
 import About from "@/components/About"
 import Works from "@/components/Works";
 import Languages from "@/components/Languages";
-// import Events from "@/components/Events";
+import Events from "@/components/Events";
 // import ContactForm from "@/components/Contact";
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
       <About />
       <Works />
       <Languages />
-      {/* <Events /> */}
+      <Events />
       {/* <ContactForm /> */}
     </div>
   );

@@ -51,6 +51,13 @@ export default function Works() {
       link: "/projects/web-memo",
       description: "Reactを理解するために一日で制作",
     },
+    {
+      image: "/images/project7.png",
+      genre: "Web App",
+      title: "コンプラチェッカー拡張機能",
+      link: "/projects/AI-compliance-agent",
+      description: "PKSHA HACKATHON 2025｜AIエージェント開発ハッカソン 2位作品",
+    },
   ];
 
   const [filter, setFilter] = useState("All");
